@@ -229,6 +229,22 @@ st.info(
     "to a specific semiconductor material."
 )
 
+st.sidebar.title("💡 QuantumLED")
+st.sidebar.write("Semiconductor Learning Dashboard")
+
+st.sidebar.markdown("---")
+st.sidebar.markdown("### Project Modules")
+st.sidebar.markdown("""
+- Band Gap Calculator
+- Wavelength Graph
+- Quantum Dot Simulator
+- LED Colour Indicator
+- Theory and Applications
+""")
+
+st.sidebar.markdown("---")
+st.sidebar.caption("ECE Capstone Project")
+st.sidebar.caption("Interactive Semiconductor Simulator")
 
 
 
