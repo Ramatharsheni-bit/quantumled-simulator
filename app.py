@@ -307,3 +307,24 @@ st.caption(
     "Actual device performance depends on material structure and operating conditions."
 )
 
+st.header("📊 QuantumLED Dashboard")
+
+col1, col2, col3 = st.columns(3)
+
+with col1:
+    st.metric("Main Focus", "Band Gap")
+
+with col2:
+    st.metric("Core Formula", "1240 / Eg")
+
+with col3:
+    st.metric("Platform", "Python")
+
+st.markdown("---")
+
+st.subheader("🎯 Project Objective")
+st.write(
+    "To demonstrate how semiconductor band-gap energy relates to light wavelength "
+    "and how quantum dot size can influence the effective band gap through an "
+    "interactive educational simulation."
+)
