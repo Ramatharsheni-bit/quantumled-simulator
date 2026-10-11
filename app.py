@@ -346,3 +346,25 @@ material-specific calibration for accurate scientific predictions.
 st.success(
     "Project outcome: An interactive web-based semiconductor learning demonstrator."
 )
+
+st.header("📘 How to Use QuantumLED")
+
+st.markdown("""
+**Step 1:** Adjust the band-gap energy slider.
+
+**Step 2:** Observe the calculated wavelength and predicted light colour.
+
+**Step 3:** Study the band-gap versus wavelength graph.
+
+**Step 4:** Change the quantum dot diameter using the size slider.
+
+**Step 5:** Observe the illustrative effective band gap and size graph.
+
+**Step 6:** Select different semiconductor materials to compare their band gaps.
+
+**Step 7:** Read the theory and applications to understand the science behind the results.
+""")
+
+st.info(
+    "Tip: Change one input at a time so you can clearly observe its effect."
+)
