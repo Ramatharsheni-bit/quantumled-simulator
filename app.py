@@ -100,6 +100,36 @@ st.metric(
     f"{effective_gap:.3f} eV"
 )
 
+st.header("Quantum Dot Size vs Band Gap")
+
+dot_sizes = np.linspace(2.0, 10.0, 100)
+band_gaps = bulk_gap + (3.0 / (dot_sizes ** 2))
+
+fig2 = go.Figure()
+
+fig2.add_trace(go.Scatter(
+    x=dot_sizes,
+    y=band_gaps,
+    mode="lines",
+    name="Band Gap"
+))
+
+fig2.add_trace(go.Scatter(
+    x=[dot_size],
+    y=[effective_gap],
+    mode="markers",
+    marker=dict(size=12),
+    name="Selected Dot Size"
+))
+
+fig2.update_layout(
+    xaxis_title="Quantum Dot Diameter (nm)",
+    yaxis_title="Illustrative Band Gap (eV)",
+    title="Effect of Quantum Dot Size on Band Gap"
+)
+
+st.plotly_chart(fig2, use_container_width=True)
+
 st.info(
     "Smaller quantum dots generally have a larger band gap. "
     "This is a simplified demonstration model, not a material-calibrated prediction."
