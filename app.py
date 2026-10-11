@@ -368,3 +368,61 @@ st.markdown("""
 st.info(
     "Tip: Change one input at a time so you can clearly observe its effect."
 )
+
+# ===== QUANTUMLED DARK THEME =====
+
+st.markdown("""
+<style>
+/* Main application background */
+.stApp {
+    background: linear-gradient(135deg, #080D1C 0%, #111936 55%, #17102D 100%);
+    color: #F1F5FF;
+}
+
+/* Main content spacing */
+.block-container {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    max-width: 1500px;
+}
+
+/* Sidebar */
+section[data-testid="stSidebar"] {
+    background: #0B1226;
+    border-right: 1px solid #283968;
+}
+
+/* Headings */
+h1, h2, h3 {
+    color: #8DBBFF !important;
+}
+
+/* Cards and metric containers */
+div[data-testid="stMetric"],
+div[data-testid="stVerticalBlockBorderWrapper"] {
+    background: rgba(24, 37, 70, 0.75);
+    border: 1px solid #344A85;
+    border-radius: 14px;
+    padding: 12px;
+}
+
+/* Buttons */
+.stButton > button {
+    background: linear-gradient(90deg, #2563EB, #7C3AED);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-weight: 600;
+}
+
+/* Input fields */
+.stSelectbox, .stSlider, .stNumberInput {
+    color: #F1F5FF;
+}
+
+/* Dividers */
+hr {
+    border-color: #344A85;
+}
+</style>
+""", unsafe_allow_html=True)
