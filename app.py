@@ -38,3 +38,36 @@ st.success(f"Predicted light colour: {colour}")
 st.write("Formula: wavelength = 1240 / band-gap energy")
 
 st.info("This is an educational semiconductor simulation.")
+
+import plotly.graph_objects as go
+import numpy as np
+
+st.header("Band Gap vs Wavelength Graph")
+
+energy_values = np.linspace(1.0, 3.5, 100)
+wavelength_values = 1240 / energy_values
+
+fig = go.Figure()
+
+fig.add_trace(go.Scatter(
+    x=energy_values,
+    y=wavelength_values,
+    mode="lines",
+    name="Band Gap Relationship"
+))
+
+fig.add_trace(go.Scatter(
+    x=[energy],
+    y=[wavelength],
+    mode="markers",
+    marker=dict(size=12),
+    name="Your Selection"
+))
+
+fig.update_layout(
+    xaxis_title="Band Gap Energy (eV)",
+    yaxis_title="Wavelength (nm)",
+    title="Relationship Between Energy and Wavelength"
+)
+
+st.plotly_chart(fig, use_container_width=True)
