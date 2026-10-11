@@ -10,7 +10,8 @@ st.write("Welcome to my ECE capstone project!")
 
 energy = st.slider(
     "Choose band-gap energy (eV)",
-    1.0, 3.5, 2.0, 0.1
+    1.0, 3.5, 2.0, 0.1,
+    key="main_band_gap_slider"
 )
 
 wavelength = 1240 / energy
