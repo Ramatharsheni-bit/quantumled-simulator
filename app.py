@@ -246,5 +246,33 @@ st.sidebar.markdown("---")
 st.sidebar.caption("ECE Capstone Project")
 st.sidebar.caption("Interactive Semiconductor Simulator")
 
+st.header("💡 LED Light Preview")
+
+colour_map = {
+    "Red": "#FF0000",
+    "Orange": "#FF8800",
+    "Yellow": "#FFFF00",
+    "Green": "#00CC44",
+    "Blue": "#0066FF",
+    "Violet": "#8800FF",
+    "Infrared": "#660000"
+}
+
+preview_colour = colour_map.get(colour, "#FFFFFF")
+
+st.markdown(
+    f"""
+    <div style="
+        background-color: {preview_colour};
+        height: 100px;
+        border-radius: 15px;
+        box-shadow: 0 0 25px {preview_colour};
+        margin: 15px 0;
+    "></div>
+    """,
+    unsafe_allow_html=True
+)
+
+st.write(f"The current LED colour is **{colour}**.")
 
 
