@@ -275,4 +275,35 @@ st.markdown(
 
 st.write(f"The current LED colour is **{colour}**.")
 
+st.header("🔬 Semiconductor Material Comparison")
+
+material = st.selectbox(
+    "Choose a semiconductor material",
+    ["Gallium Arsenide (GaAs)", "Gallium Nitride (GaN)", "Silicon (Si)"]
+)
+
+material_data = {
+    "Gallium Arsenide (GaAs)": {
+        "gap": 1.42,
+        "use": "Infrared devices and red/near-infrared LEDs"
+    },
+    "Gallium Nitride (GaN)": {
+        "gap": 3.4,
+        "use": "Blue LEDs and power electronics"
+    },
+    "Silicon (Si)": {
+        "gap": 1.12,
+        "use": "Electronic devices and integrated circuits"
+    }
+}
+
+selected = material_data[material]
+
+st.metric("Approximate Band Gap at Room Temperature", f"{selected['gap']} eV")
+st.write(f"**Common applications:** {selected['use']}")
+
+st.caption(
+    "Values are approximate room-temperature band gaps. "
+    "Actual device performance depends on material structure and operating conditions."
+)
 
