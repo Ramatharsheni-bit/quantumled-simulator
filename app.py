@@ -71,3 +71,36 @@ fig.update_layout(
 )
 
 st.plotly_chart(fig, use_container_width=True)
+
+st.header("Quantum Dot Size Simulator")
+
+st.write("Explore how quantum dot size affects the energy band gap.")
+
+dot_size = st.slider(
+    "Choose quantum dot diameter (nm)",
+    min_value=2.0,
+    max_value=10.0,
+    value=5.0,
+    step=0.5
+)
+
+bulk_gap = st.number_input(
+    "Bulk material band gap (eV)",
+    min_value=0.1,
+    max_value=3.0,
+    value=1.1,
+    step=0.1
+)
+
+# Illustrative model only; not calibrated to a specific material
+effective_gap = bulk_gap + (3.0 / (dot_size ** 2))
+
+st.metric(
+    "Illustrative effective band gap",
+    f"{effective_gap:.3f} eV"
+)
+
+st.info(
+    "Smaller quantum dots generally have a larger band gap. "
+    "This is a simplified demonstration model, not a material-calibrated prediction."
+)
