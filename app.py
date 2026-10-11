@@ -172,3 +172,24 @@ st.write(
     "Here, Eg is the photon energy in eV and wavelength is in nanometres (nm). "
     "This formula relates photon energy to wavelength."
 )
+
+st.header("LED Colour Indicator")
+
+st.write("See the approximate visible-light colour for your selected band gap.")
+
+if wavelength >= 620 and wavelength <= 750:
+    st.markdown("### 🔴 Red")
+elif wavelength >= 590:
+    st.markdown("### 🟠 Orange")
+elif wavelength >= 570:
+    st.markdown("### 🟡 Yellow")
+elif wavelength >= 495:
+    st.markdown("### 🟢 Green")
+elif wavelength >= 450:
+    st.markdown("### 🔵 Blue")
+elif wavelength >= 380:
+    st.markdown("### 🟣 Violet")
+else:
+    st.markdown("### Outside the visible-light range")
+
+st.write(f"Calculated wavelength: {wavelength:.2f} nm")
