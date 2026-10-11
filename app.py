@@ -134,3 +134,41 @@ st.info(
     "Smaller quantum dots generally have a larger band gap. "
     "This is a simplified demonstration model, not a material-calibrated prediction."
 )
+
+st.header("Theory of QuantumLED")
+
+st.subheader("1. What is a Band Gap?")
+st.write(
+    "The band gap is the energy difference between the valence band "
+    "and the conduction band in a semiconductor. It is measured in electron volts (eV)."
+)
+
+st.subheader("2. What is Quantum Confinement?")
+st.write(
+    "Quantum confinement occurs when semiconductor particles become very small. "
+    "Their energy levels change, and the effective band gap generally increases "
+    "as the particle size decreases."
+)
+
+st.subheader("3. How Does an LED Produce Light?")
+st.write(
+    "When electrons combine with holes in a semiconductor, energy can be released "
+    "as light. The band gap influences the wavelength and colour of the emitted light."
+)
+
+st.subheader("4. Applications")
+st.markdown("""
+- **LED displays:** Producing different colours of light.
+- **Quantum dot displays:** Improving display colour and brightness.
+- **Solar cells:** Studying light absorption and energy conversion.
+- **Sensors:** Detecting changes in the surrounding environment.
+""")
+
+st.subheader("5. Important Formula")
+
+st.latex(r"E_g = \frac{1240}{\lambda}")
+
+st.write(
+    "Here, Eg is the photon energy in eV and wavelength is in nanometres (nm). "
+    "This formula relates photon energy to wavelength."
+)
