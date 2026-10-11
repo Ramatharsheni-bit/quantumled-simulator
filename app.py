@@ -8,6 +8,104 @@ st.set_page_config(
     layout="wide",
     initial_sidebar_state="expanded"
 )
+st.markdown("""
+<style>
+/* Main application background */
+.stApp {
+    background: linear-gradient(
+        135deg, #070B18 0%, #0B1124 55%, #11102B 100%
+    );
+    color: #E8EEFF;
+}
+
+/* Main content spacing */
+.block-container {
+    padding-top: 2rem;
+    padding-bottom: 3rem;
+    max-width: 1400px;
+}
+
+/* Headings */
+h1, h2, h3 {
+    color: #F1F5FF !important;
+    letter-spacing: -0.5px;
+}
+
+/* Cards */
+div[data-testid="stMetric"],
+div[data-testid="stVerticalBlockBorderWrapper"] {
+    background: rgba(18, 28, 54, 0.78);
+    border: 1px solid rgba(93, 123, 255, 0.22);
+    border-radius: 16px;
+    padding: 16px;
+}
+
+/* Buttons */
+.stButton > button {
+    background: linear-gradient(90deg, #2563EB, #7C3AED);
+    color: white;
+    border: 1px solid rgba(147, 197, 253, 0.35);
+    border-radius: 10px;
+    padding: 0.55rem 1.1rem;
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+.stButton > button:hover {
+    border-color: #60A5FA;
+    box-shadow: 0 0 18px rgba(59, 130, 246, 0.3);
+    color: white;
+}
+
+/* Input fields */
+.stTextInput input,
+.stNumberInput input,
+.stSelectbox div[data-baseweb="select"],
+.stTextArea textarea {
+    background-color: #111A30;
+    color: #F1F5FF;
+    border-radius: 9px;
+}
+
+/* Sidebar */
+section[data-testid="stSidebar"] {
+    background: #080D1B;
+    border-right: 1px solid rgba(96, 120, 255, 0.22);
+}
+
+/* Tabs */
+.stTabs [data-baseweb="tab-list"] {
+    gap: 8px;
+}
+
+.stTabs [data-baseweb="tab"] {
+    background: #111A30;
+    border-radius: 8px;
+    padding: 10px 16px;
+}
+
+.stTabs [aria-selected="true"] {
+    border-bottom: 2px solid #60A5FA;
+}
+
+/* Dividers */
+hr {
+    border-color: rgba(129, 140, 248, 0.18);
+}
+
+/* Status and supporting text */
+div[data-testid="stCaptionContainer"] {
+    color: #9BAAC9;
+}
+
+/* Keep layout responsive */
+@media (max-width: 768px) {
+    .block-container {
+        padding: 1rem;
+    }
+}
+</style>
+""", unsafe_allow_html=True)
 st.title("💡 QuantumLED Simulator")
 st.subheader("Semiconductor Band Gap and LED Colour")
 
