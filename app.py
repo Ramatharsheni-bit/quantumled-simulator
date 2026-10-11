@@ -193,3 +193,32 @@ else:
     st.markdown("### Outside the visible-light range")
 
 st.write(f"Calculated wavelength: {wavelength:.2f} nm")
+
+st.header("About This Project")
+
+st.write("**Project Title:** QuantumLED — Quantum-Confined LED and Semiconductor Band-Gap Demonstrator")
+
+st.write("""
+**Objective:** To demonstrate the relationship between semiconductor band-gap
+energy, wavelength, and quantum dot size using an interactive website.
+
+**Technology Used:**
+- Python
+- Streamlit
+- NumPy
+- Plotly
+
+**Main Features:**
+- Band-gap energy and wavelength calculator
+- Energy versus wavelength graph
+- Quantum dot size simulator
+- Band gap versus dot size graph
+- LED colour indicator
+- Semiconductor theory and applications
+""")
+
+st.info(
+    "This website is an educational simulation. "
+    "Its simplified quantum-dot model is illustrative and is not calibrated "
+    "to a specific semiconductor material."
+)
