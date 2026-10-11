@@ -1,8 +1,13 @@
 
 import streamlit as st
 
-st.set_page_config(page_title="QuantumLED", page_icon="💡")
 
+st.set_page_config(
+    page_title="QuantumLED Simulator",
+    page_icon="💡",
+    layout="wide",
+    initial_sidebar_state="expanded"
+)
 st.title("💡 QuantumLED Simulator")
 st.subheader("Semiconductor Band Gap and LED Colour")
 
