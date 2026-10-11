@@ -328,3 +328,21 @@ st.write(
     "and how quantum dot size can influence the effective band gap through an "
     "interactive educational simulation."
 )
+
+st.header("✅ Project Conclusion")
+
+st.write("""
+QuantumLED is an interactive educational website developed to demonstrate
+the relationship between semiconductor band-gap energy and light wavelength.
+
+It also illustrates how quantum dot size can influence the effective band gap.
+The website combines calculations, graphs, material comparisons, and theory
+to make semiconductor concepts easier to understand.
+
+The quantum dot calculation is a simplified illustrative model and requires
+material-specific calibration for accurate scientific predictions.
+""")
+
+st.success(
+    "Project outcome: An interactive web-based semiconductor learning demonstrator."
+)
